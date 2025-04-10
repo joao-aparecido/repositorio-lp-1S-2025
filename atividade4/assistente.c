@@ -4,6 +4,7 @@ int main(int argc, char* argv[]){
     
 int opcao;
 
+do{
     printf("Escolha qual tipo de filme deseja: \n");
     printf("1 - Leve \n");
     printf("2 - Intenso \n");  
@@ -60,7 +61,11 @@ int opcao;
             printf("Aconselho assistir ao filme Mad max ");
             }
         }
-        
+    printf("Deseja escolher outro filme?\n ");
+    printf("0 - Sim\n");
+    printf("1 - Nao\n");
+    scanf("%d, &opcao");
+} while (opcao == 0);   
     return 0;
 
 }
