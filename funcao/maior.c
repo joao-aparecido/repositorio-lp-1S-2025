@@ -9,21 +9,21 @@ int main(int argc, char* argv[]){
 
     if(argc != 3 && argc != 4){
         printf("informe 2 ou 3 argumentos.");
-        return 1,
+        return 1;
     }
 
     if (argc == 3){
-    int x = atoi (argv[1]);
-    int y = atoi (argv[2]);
-    printf("maior(%d, %d): %d", x, y, maior_2n(x, y));
-    //printf("maior (%d, %d): %d", x, y, maior_2n)
+        x = atoi(argv[1]);
+        y = atoi(argv[2]);
+        printf("%d", maior_2n(x, y));
     }
 
-    else{
-        x = atroi(argv[1]);
-        y = atroi(argv[2]);
-        z = atroi(argv[3]);
-        printf("%d", maior_3n(x, y, z));
+    else if (argc == 4){
+        x = atoi(argv[1]);
+        y = atoi(argv[2]);
+        z = atoi(argv[3]);
+        printf("O maior numero eh: %d", maior_3n(x, y, z));
     }
+    
     return 0;
 }
