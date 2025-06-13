@@ -1,32 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-#define MAX 225
+typedef struct {
+    float x;
+    float y;
+} Ponto;
 
-//global
-int y = 1;
-
-void incrementaX(int x){
-    //local
-    int x = 1;
-    while (*x < 5)   
-    {
-        y++;
-        *x = 11
-    }
-
+float calcularDistancia(Ponto a, Ponto b) {
+    return sqrt(pow(b.x - a.x, 2) + pow(b.y - a.y, 2));
 }
 
-int main(int argc, char* argv[]){
+int main(int argc, char *argv[]) {
+    if (argc != 5) {
+        printf("Uso: %s Xa Ya Xb Yb\n", argv[0]);
+        return 1;
+    }
 
-    int z = 1;
+    Ponto pontoA, pontoB;
 
-    incrementaX(&z);
+    pontoA.x = atof(argv[1]);
+    pontoA.y = atof(argv[2]);
+    pontoB.x = atof(argv[3]);
+    pontoB.y = atof(argv[4]);
 
-    printf("y = %d\n", x);
-    printf("z = %d", y);
+    float distancia = calcularDistancia(pontoA, pontoB);
 
-    printf("*z = %d\n", *z);
-    printf("w = %d", *w);
-    
+    printf("Distância entre os pontos: %.2f\n", distancia);
+
     return 0;
 }
